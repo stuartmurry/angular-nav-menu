@@ -1,13 +1,17 @@
 # angular-nav-menu
+
 Write a simple mobile nav menu using angular.io, typescript, bootstrap, font-awesome, and router.
 
 # setup environment
+
 install node.js
 
 # Dependencies
 
 angular-cli
+
 angular-cli-ghpages
+
 github-pages enabled (Found in the settings menu) (Also, do this after initial ngh deployment)
 
 # Caution
@@ -17,6 +21,7 @@ github-pages enabled (Found in the settings menu) (Also, do this after initial n
 # Instructions
 
 `npm i -g angular-cli@latest`
+
 `npm i -g angular-cli-ghpages@latest`
 
 `git clone https://github.com/stuartmurry/angular-nav-menu.git` 
@@ -33,16 +38,20 @@ Create a new repository on Github.  Find the clone or download button.  You will
 
 `git remote add origin https://github.com/<repository-name>/<project>.git`
 
-Build Project
+Build Project. (p.s. Don't forget to include the forward slash at the end otherwise, the browser will fix url and all references to your files will be lost.)
+
 `ng build --prod --base-href "https://<repository-name>.github.io/<project>/"`
 
 Deploy to GitHub Pages
+
 `ngh`
 
 Go into `settings` within your Github account and select `settings` tab. Find Github Pages and select `gh-pages` branch from the dropdown menu. 
 
 # Create From Scratch
+
 Using the angular-cli, create a new angular project.
+
 `ng new angular-nav-menu`
 
 `cd angular-nav-menu`
