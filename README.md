@@ -58,6 +58,10 @@ Using the angular-cli, create a new angular project.
 
 Jump to `To deploy to Github Pages` and follow those instructions.
 
+# Mockup
+
+![alt text](https://raw.githubusercontent.com/stuartmurry/angular-nav-menu/master/mockup.jpg)
+
 
 
 
