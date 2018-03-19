@@ -1,0 +1,5 @@
+<div class="container nav-container" [style.height.px]="height">
+  <div *ngFor="let m of menuItems" (click)="navClick(m)" [ngStyle]="{ 'flex-grow' : m.GrowFactor }" class="item" [ngClass]="{ 'bkgnd-closed' : IsClosed(), 'bkgnd-open' : IsOpen() }">
+    <i data-fa-transform="grow-3" class="icon {{ m.FontAwesomeCategory }} {{ m.FontAwesome }}"></i> {{m.name}}
+  </div>
+</div>

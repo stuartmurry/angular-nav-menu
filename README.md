@@ -46,7 +46,7 @@ Deploy to GitHub Pages
 
 `ngh`
 
-Go into `settings` within your Github account and select `settings` tab. Find Github Pages and select `gh-pages` branch from the dropdown menu. 
+Go into `settings` within your Github account and select `settings` tab. Find Github Pages and select `gh-pages` branch from the dropdown menu.  `ngh` should do this automatically, however, its always safe to double check.
 
 # Create From Scratch
 
@@ -55,6 +55,8 @@ Using the angular-cli, create a new angular project.
 `ng new angular-nav-menu`
 
 `cd angular-nav-menu`
+
+`npm install --save @ng-bootstrap/ng-bootstrap`
 
 Jump to `To deploy to Github Pages` and follow those instructions.
 
