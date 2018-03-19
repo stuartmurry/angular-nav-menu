@@ -4,14 +4,16 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LandingComponent } from './landing/landing.component';
+import { DataService } from './service/data.service';
 
 const appRoutes: Routes = [
 
-  { path: "nav", component: NavComponent },
+  { path: "landing", component: LandingComponent },
 
   {
     path: "",
-    redirectTo: "/nav",
+    redirectTo: "/landing",
     pathMatch: "full"
   },
 
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ const appRoutes: Routes = [
       { enableTracing: false } // <-- debugging purposes only
     ),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ DataService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavMenu } from '../app';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
@@ -12,46 +12,43 @@ export class NavComponent implements OnInit {
 
   constructor() { }
 
+  @Input()
   menuItems : NavMenu[];
   height : number;
-
   $resize : Observable<any>;
 
   ngOnInit() {
-    this.menuItems = [];
-    this.menuItems.push( { name : 'Define', url : '', GrowFactor : 0, FontAwesomeCategory: 'fas', FontAwesome : 'fa-address-book'});
-    this.menuItems.push( { name : 'Gather', url : '', GrowFactor : 0, FontAwesomeCategory: 'fas', FontAwesome : 'fa-address-card'});
-    this.menuItems.push( { name : 'See', url : '', GrowFactor : 0, FontAwesomeCategory: 'fas', FontAwesome : 'fa-anchor'});
-    this.menuItems.push( { name : 'Act', url : '', GrowFactor : 0, FontAwesomeCategory: 'fab', FontAwesome : 'fa-android'});
-    this.menuItems.push( { name : 'Admin', url : '', GrowFactor : 10, FontAwesomeCategory: 'fas', FontAwesome : 'fa-bell'});
     
+    // Initialize
     this.height = window.innerHeight;
+
+    // Example of how to treat event as observer
     this.$resize = Observable.fromEvent(window, 'resize');
     this.$resize.subscribe((e) => {
-      console.log('Resize Event');
       this.height = e.target.outerHeight;
-      console.log(this.height);
     });
   }
 
   navClick(nm : NavMenu) {
-
-    this.menuItems.forEach(i => i.GrowFactor = 0);
-    nm.GrowFactor = 10;
     
-    console.log(nm);
-  }
-  
+    // Clear previous settings
+    this.menuItems.forEach(i => {
+      i.GrowFactor = 0;
+      i.IsExpanded = false;
+    });
 
-  hello() {
-    alert('Hello World');
+    // dynamically adjust html flexbox
+    nm.GrowFactor = 10;
+    nm.IsExpanded = true;
+
   }
 
-  IsClosed() : boolean {
-    return true;
+  IsClosed(nm : NavMenu) : boolean {
+    return !nm.IsExpanded;
   }
-  IsOpen() : boolean {
-    return false;
+
+  IsOpen(nm : NavMenu) : boolean {
+    return nm.IsExpanded;
   }
 
 }

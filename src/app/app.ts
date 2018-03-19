@@ -7,4 +7,5 @@ export interface NavMenu {
     GrowFactor : number;
     FontAwesome : string;
     FontAwesomeCategory : string; // fas, fal, far - solid, light, regular respectively
+    IsExpanded : boolean;
 }
