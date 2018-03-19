@@ -2,6 +2,18 @@
 
 Write a simple mobile nav menu using angular.io, typescript, bootstrap, font-awesome, and router.
 
+Some key technologies used here are:
+
+* Angular.io (Currently 2.6)
+* Angular-CLI
+* Font Awesome 5
+* Bootstrap 4
+* Angular Routing - SPA Framework
+* RxJS
+* Event Handling
+* TypeScript
+* EcmaScript
+
 # setup environment
 
 install node.js
@@ -63,6 +75,20 @@ Jump to `To deploy to Github Pages` and follow those instructions.
 # Mockup
 
 ![alt text](https://raw.githubusercontent.com/stuartmurry/angular-nav-menu/master/mockup.jpg)
+
+# Nav Template
+
+5 lines says it all.  
+
+```html
+
+<div class="container nav-container" [style.height.px]="height">
+  <div *ngFor="let m of menuItems" (click)="navClick(m)" [ngStyle]="{ 'flex-grow' : m.GrowFactor }" class="item" [ngClass]="{ 'bkgnd-closed' : IsClosed(m), 'bkgnd-open' : IsOpen(m) }">
+    <i data-fa-transform="grow-3" class="icon {{ m.FontAwesomeCategory }} {{ m.FontAwesome }}"></i> {{m.name}}
+  </div>
+</div>
+
+```
 
 
 

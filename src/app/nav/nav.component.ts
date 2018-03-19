@@ -25,7 +25,7 @@ export class NavComponent implements OnInit {
     // Example of how to treat event as observer
     this.$resize = Observable.fromEvent(window, 'resize');
     this.$resize.subscribe((e) => {
-      this.height = e.target.outerHeight;
+      this.height = e.target.innerHeight;
     });
   }
 
