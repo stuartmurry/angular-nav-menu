@@ -6,6 +6,7 @@ import { NavComponent } from './nav/nav.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LandingComponent } from './landing/landing.component';
 import { DataService } from './service/data.service';
+import { NavDirective } from './nav/nav.directive';
 
 const appRoutes: Routes = [
 
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     AppComponent,
     NavComponent,
     PageNotFoundComponent,
-    LandingComponent
+    LandingComponent,
+    NavDirective
   ],
   imports: [
     BrowserModule,

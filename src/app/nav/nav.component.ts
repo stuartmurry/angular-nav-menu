@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { NavMenu } from '../app';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
@@ -10,23 +10,43 @@ import 'rxjs/add/observable/fromEvent';
 })
 export class NavComponent implements OnInit {
 
+  // [style.height.px]="height"
   constructor() { }
 
   @Input()
   menuItems : NavMenu[];
+  
+  // @Input()
+  // width : number;
+  navHeight : number = 50;
+
   height : number;
+  scrollHeight: number;
+  // width : number;
   $resize : Observable<any>;
 
   ngOnInit() {
-    
+
     // Initialize
     this.height = window.innerHeight;
+    this.calculateNavHeight();
 
     // Example of how to treat event as observer
     this.$resize = Observable.fromEvent(window, 'resize');
     this.$resize.subscribe((e) => {
+      // this.width = document.getElementById()
       this.height = e.target.innerHeight;
+      this.calculateNavHeight();
     });
+  }
+
+  calculateNavHeight() {
+    let calibration = 17;//                 borders, margin, etc
+    this.scrollHeight = (this.height - (this.menuItems.length * 2) - (this.menuItems.length * this.navHeight)) - calibration;
+  }
+
+  captureResize() {
+    console.log(this);
   }
 
   navClick(nm : NavMenu) {

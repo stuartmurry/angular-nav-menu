@@ -4,7 +4,7 @@ Write a simple mobile nav menu using angular.io, typescript, bootstrap, font-awe
 
 Some key technologies used here are:
 
-* Angular.io (Currently 2.6)
+* Angular.io 5.2
 * Angular-CLI
 * Font Awesome 5
 * Bootstrap 4
@@ -13,6 +13,9 @@ Some key technologies used here are:
 * Event Handling
 * TypeScript
 * EcmaScript
+* GitHub Pages
+* HTML 5
+* CSS
 
 # setup environment
 
