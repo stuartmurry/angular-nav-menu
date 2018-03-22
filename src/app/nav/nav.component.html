@@ -3,7 +3,7 @@
     [ngClass]="{ 'bkgnd-closed' : IsClosed(m), 'bkgnd-open' : IsOpen(m) }">
     <div class="header" [ngClass]="{ 'bkgnd-closed' : IsClosed(m), 'bkgnd-open' : IsOpen(m) }">
       <div class="header-label">
-        <i data-fa-transform="grow-3" class="icon {{ m.FontAwesomeCategory }} {{ m.FontAwesome }}"></i>  {{m.name}}
+        <i data-fa-transform="grow-3" class="icon {{ m.FontAwesomeCategory }} {{ m.FontAwesome }}"></i> {{m.name}}
       </div>
       <div class="header-chevron">
         <span *ngIf="m.IsExpanded">
@@ -14,28 +14,10 @@
         </span>
       </div>
     </div>
-
-    <div *ngIf="m.IsExpanded" [style.height.px]="scrollHeight" style="overflow-y: scroll;">
-      <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia fugiat magni vitae laboriosam ipsam labore deleniti blanditiis,
-      voluptate consectetur ut obcaecati aliquid aliquam quas qui suscipit. Quae omnis fugit minima. Lorem ipsum dolor sit
-      amet consectetur adipisicing elit. Cupiditate quia iure deserunt nesciunt at et! Deserunt deleniti quo delectus explicabo
-      exercitationem quas perferendis sunt! Soluta nisi tempore magnam dolore voluptas! Lorem, ipsum dolor sit amet consectetur
-      adipisicing elit. Delectus eos, totam sed deleniti repellendus voluptatem, alias officiis magni id cum quo similique
-      illum nemo esse? Laboriosam non ut iure optio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam eum
-      impedit rem, corrupti quibusdam dolorem laudantium nulla enim vero perspiciatis in soluta nam voluptates similique,
-      amet nesciunt? Corrupti, ab odit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit possimus repellendus,
-      atque nostrum dolorem fugiat accusantium molestias aliquam ipsa consectetur dicta eligendi quo magnam velit delectus
-      molestiae unde. Tempora, impedit! -->
-      
-<ul class="list-group">
-  <li class="list-group-item list-item">Cras justo odio</li>
-  <li class="list-group-item list-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item list-item">Morbi leo risus</li>
-  <li class="list-group-item list-item">Porta ac consectetur ac</li>
-  <li class="list-group-item list-item">Vestibulum at eros</li>
-</ul>
-</div>
-
+    <div *ngIf="m.IsExpanded" [style.height.px]="scrollHeight" class="scrollable">
+      <ul class="list-group">
+        <li class="list-group-item list-item" *ngFor="let l of m.items">{{l.name}}</li>
+      </ul>
+    </div>
   </div>
-
 </div>

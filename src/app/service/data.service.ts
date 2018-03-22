@@ -1,21 +1,83 @@
-import { Injectable } from '@angular/core';
-import { NavMenu } from '../app';
+import { Injectable } from "@angular/core";
+import { NavMenu } from "../app";
 
 @Injectable()
 export class DataService {
+  constructor() {}
 
-  constructor() { }
-
-  GetMenuItems() : NavMenu[] {
-    
-    let menuItems : NavMenu[] = [];
-    menuItems.push( { name : 'Define', url : '', GrowFactor : 0, FontAwesomeCategory: 'fas', FontAwesome : 'fa-address-book', IsExpanded:false });
-    menuItems.push( { name : 'Gather', url : '', GrowFactor : 0, FontAwesomeCategory: 'fas', FontAwesome : 'fa-address-card', IsExpanded:false });
-    menuItems.push( { name : 'See', url : '', GrowFactor : 0, FontAwesomeCategory: 'fas', FontAwesome : 'fa-anchor', IsExpanded:false });
-    menuItems.push( { name : 'Act', url : '', GrowFactor : 0, FontAwesomeCategory: 'fab', FontAwesome : 'fa-android', IsExpanded:false });
-    menuItems.push( { name : 'Admin', url : '', GrowFactor : 10, FontAwesomeCategory: 'fas', FontAwesome : 'fa-bell', IsExpanded:true });
+  GetMenuItems(): NavMenu[] {
+    let menuItems: NavMenu[] = [];
+    menuItems.push({
+      name: "Interview",
+      url: "",
+      GrowFactor: 0,
+      FontAwesomeCategory: "fas",
+      FontAwesome: "fa-address-book",
+      IsExpanded: false,
+      items: [
+        { name : 'Lorem ipsum1', menulink : '' },
+        { name : 'Lorem ipsum2', menulink : '' },
+        { name : 'Lorem ipsum3', menulink : '' },
+        { name : 'Lorem ipsum4', menulink : '' },
+        { name : 'Lorem ipsum5', menulink : ''},
+      ]
+    });
+    menuItems.push({
+      name: "Gather",
+      url: "",
+      GrowFactor: 0,
+      FontAwesomeCategory: "fas",
+      FontAwesome: "fa-address-card",
+      IsExpanded: false,
+      items: [
+        { name : 'Lorem ipsum6', menulink : '' },
+      ]
+    });
+    menuItems.push({
+      name: "See",
+      url: "",
+      GrowFactor: 0,
+      FontAwesomeCategory: "fas",
+      FontAwesome: "fa-anchor",
+      IsExpanded: false,
+      items: [
+        { name : 'Lorem ipsum7', menulink : '' },
+        { name : 'Lorem ipsum8', menulink : '' },
+        { name : 'Lorem ipsum9', menulink : '' },
+        { name : 'Lorem ipsum10', menulink : ''},
+        { name : 'Lorem ipsum11', menulink : ''},
+        { name : 'Lorem ipsum12', menulink : ''},
+        { name : 'Lorem ipsum13', menulink : ''},
+        { name : 'Lorem ipsum14', menulink : ''},
+        { name : 'Lorem ipsum15', menulink : ''},
+      ]
+    });
+    menuItems.push({
+      name: "Act",
+      url: "",
+      GrowFactor: 0,
+      FontAwesomeCategory: "fab",
+      FontAwesome: "fa-android",
+      IsExpanded: false,
+      items: [
+        { name : 'Lorem ipsum16', menulink : '' },
+      ]
+    });
+    menuItems.push({
+      name: "Admin",
+      url: "",
+      GrowFactor: 10,
+      FontAwesomeCategory: "fas",
+      FontAwesome: "fa-bell",
+      IsExpanded: true,
+      items: [
+        { name : 'Lorem ipsum17', menulink : '' },
+        { name : 'Lorem ipsum18', menulink : '' },
+        { name : 'Lorem ipsum19', menulink : '' },
+        { name : 'Lorem ipsum20', menulink : '' },
+      ]
+    });
 
     return menuItems;
   }
-
 }
