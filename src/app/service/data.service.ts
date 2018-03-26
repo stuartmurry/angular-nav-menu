@@ -7,34 +7,34 @@ export class DataService {
 
   GetMenuItems(): NavMenu[] {
     let menuItems: NavMenu[] = [];
+    // menuItems.push({
+    //   name: "Games",
+    //   url: "",
+    //   GrowFactor: 0,
+    //   FontAwesomeCategory: "fas",
+    //   FontAwesome: "fa-address-book",
+    //   IsExpanded: false,
+    //   items: [
+    //     { name : 'Lorem ipsum1', menulink : '' },
+    //     { name : 'Lorem ipsum2', menulink : '' },
+    //     { name : 'Lorem ipsum3', menulink : '' },
+    //     { name : 'Lorem ipsum4', menulink : '' },
+    //     { name : 'Lorem ipsum5', menulink : ''},
+    //   ]
+    // });
+    // menuItems.push({
+    //   name: "Characters",
+    //   url: "",
+    //   GrowFactor: 0,
+    //   FontAwesomeCategory: "fas",
+    //   FontAwesome: "fa-address-card",
+    //   IsExpanded: false,
+    //   items: [
+    //     { name : 'Lorem ipsum6', menulink : '' },
+    //   ]
+    // });
     menuItems.push({
-      name: "Interview",
-      url: "",
-      GrowFactor: 0,
-      FontAwesomeCategory: "fas",
-      FontAwesome: "fa-address-book",
-      IsExpanded: false,
-      items: [
-        { name : 'Lorem ipsum1', menulink : '' },
-        { name : 'Lorem ipsum2', menulink : '' },
-        { name : 'Lorem ipsum3', menulink : '' },
-        { name : 'Lorem ipsum4', menulink : '' },
-        { name : 'Lorem ipsum5', menulink : ''},
-      ]
-    });
-    menuItems.push({
-      name: "Gather",
-      url: "",
-      GrowFactor: 0,
-      FontAwesomeCategory: "fas",
-      FontAwesome: "fa-address-card",
-      IsExpanded: false,
-      items: [
-        { name : 'Lorem ipsum6', menulink : '' },
-      ]
-    });
-    menuItems.push({
-      name: "See",
+      name: "Invitations",
       url: "",
       GrowFactor: 0,
       FontAwesomeCategory: "fas",
@@ -53,7 +53,7 @@ export class DataService {
       ]
     });
     menuItems.push({
-      name: "Act",
+      name: "Characters",
       url: "",
       GrowFactor: 0,
       FontAwesomeCategory: "fab",
@@ -64,7 +64,7 @@ export class DataService {
       ]
     });
     menuItems.push({
-      name: "Admin",
+      name: "Games",
       url: "",
       GrowFactor: 10,
       FontAwesomeCategory: "fas",

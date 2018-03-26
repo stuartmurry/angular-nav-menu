@@ -2,11 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
+import { AccordianComponent } from './accordian/accordian.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LandingComponent } from './landing/landing.component';
 import { DataService } from './service/data.service';
-import { NavDirective } from './nav/nav.directive';
 
 const appRoutes: Routes = [
 
@@ -25,10 +24,9 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
+    AccordianComponent,
     PageNotFoundComponent,
     LandingComponent,
-    NavDirective
   ],
   imports: [
     BrowserModule,

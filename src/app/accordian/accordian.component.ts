@@ -4,11 +4,11 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  selector: 'app-accordian',
+  templateUrl: './accordian.component.html',
+  styleUrls: ['./accordian.component.css']
 })
-export class NavComponent implements OnInit {
+export class AccordianComponent implements OnInit {
 
   // [style.height.px]="height"
   constructor() { }
